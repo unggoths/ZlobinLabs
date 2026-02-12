@@ -32,7 +32,7 @@ namespace Lab2
                 !double.TryParse(textBox2.Text.Trim(), NumberStyles.Any, CultureInfo.CurrentCulture, out b) ||
                 !double.TryParse(textBox3.Text.Trim(), out n) || n <= 0)
             {
-                MessageBox.Show("Помилка введення!");
+                MessageBox.Show("Помилка введення! Введіть коректні значення.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
             }
 
@@ -56,24 +56,5 @@ namespace Lab2
             textBox4.Text = integral.ToString("F6");
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
